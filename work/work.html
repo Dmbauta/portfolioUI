@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="work.css">
+    <!-- <link rel="stylesheet" href="mobileFirst.css"> -->
+</head>
+<body>
+    <main>
+        <header class="mainHeader">
+            <!-- Logo -->
+            <h2 class="logo"><a href="../index.html">Dm<span>.</span></a></h2>
+            <!-- Navigation -->
+            <nav class="menuToggle" onclick="toggleMenu();"></nav>
+            <nav class="navigation" onclick="toggleMenu();">
+                <li><a href="../blog/blog.html">Blogs</a></li>
+                <li><a href="#" class="current">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </nav>
+        </header>
+        <!-- Featured works -->
+        <section class="workContainer" id="work">
+            <div class="featureWork post">
+            <h2 class="heading">Works</h2>
+            <div class="workBox">
+                <div class="imgBox">
+                    <img src="../img1.png" alt="">
+                </div>
+                <div class="featureContent">
+                    <h3>Designing Dashboards</h3>
+                    <div class="boxDate">
+                    <p class="featureDate">2020</p><p class="workCat">Dashboards</p>
+                </div>
+                    <p class="featureText">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="workBox">
+                <div class="imgBox">
+                    <img src="../img2.png" alt="">
+                </div>
+                <div class="featureContent">
+                    <h3>Vibrant Portraits of 2020</h3>
+                    <div class="boxDate">
+                        <p class="featureDate">2021</p><p class="workCat">Illustrations</p>
+                    </div>
+                    <p class="featureText">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="workBox">
+                <div class="imgBox">
+                    <img src="../img3.png" alt="">
+                </div>
+                <div class="featureContent">
+                    <h3>36 Days of Malayalam type</h3>
+                    <div class="boxDate">
+                        <p class="featureDate">2022</p><p class="workCat">Typography</p>
+                    </div>
+                    <p class="featureText">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="workBox">
+                <div class="imgBox">
+                    <img src="../img3.png" alt="">
+                </div>
+                <div class="featureContent">
+                    <h3>36 Days of Malayalam type</h3>
+                    <div class="boxDate">
+                        <p class="featureDate">2022</p><p class="workCat">Typography</p>
+                    </div>
+                    <p class="featureText">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+            <hr>
+            </div>
+        </section>
+        <footer id="contact">
+            <div class="socialIcon">
+                <a href="#"><img src="../fb.png" alt=""></a>
+                <a href="#"><img src="../twitter.png" alt=""></a>
+                <a href="#"><img src="../insta.png" alt=""></a>
+                <a href="#"><img src="../linkedin.png" alt=""></a>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy;2022 All rights reserved</p>
+            </div>
+        </footer>
+    </main>
+    <script>
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        };
+    </script>
+</body>
+</html>

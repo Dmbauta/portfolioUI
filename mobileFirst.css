@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans';
+    box-sizing: border-box;    
+    --primarycolor: #21243D;
+    --secondaryColor: #FF6464;
+    --thirdColor:#EDF7FA;
+    --fourthColor:#00A8CC;
+    --fifthColor:#8695A4;
+    --sixthColor:#E0E0E0;
+    color: var(--primarycolor);
+    /* overflow-x: hidden; */
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+hr {
+    margin: 10px 0;
+}
+.mainHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 10px 20px;
+}
+.logo a{
+    font-size: 1em;
+    color: var(--primarycolor);
+}
+.logo span {
+    color: var(--secondaryColor);
+}
+.menuToggle {
+    background: url(./menu.png);
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+}
+.menuToggle.active {
+    background: url(./close.png);
+    position: fixed;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    z-index: 21;
+}
+.navigation.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 20;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 60px 40px 0 0;
+}
+.navigation.active li {
+    margin-top: 10px;
+    transition: 0.2s ease-in-out;
+}
+.navigation.active li:hover {
+    letter-spacing: 1px;
+}
+.navigation {
+    display: none;
+}
+.banner {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.bannerContent h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.bannerContent p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.bannerContent button {
+    margin: 10px 0;
+    width: 200px;
+    padding: 10px 20px;
+    color: #fff;
+    background: var(--secondaryColor);
+    border: 2px solid var(--secondaryColor);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 50px;
+}
+.bannerContent button:hover {
+    background: #fff;
+    border: 2px solid var(--secondaryColor);
+    color: var(--secondaryColor);
+}
+.bannerImg {
+    max-width: 200px;
+    height: 100%;
+    margin-top: 20px;
+}
+.bannerImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+.container {
+    width: 100%;
+    background-color: var(--thirdColor);
+    padding: 40px 0;
+}
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0 10px 0;
+}
+.recent {
+    text-transform: capitalize;
+    font-size: 1em;
+}
+.view {
+    display: none;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+.postBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boxContent {
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.boxContent a h3{
+    font-size: 1em;
+    padding-bottom: 10px;
+}
+.boxDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.boxDate p {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+.boxDate p:first-child{
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid var(--primarycolor);
+    width: fit-content;
+}
+.workContainer {
+    width: 100%;
+    padding: 0 0 40px 0;
+}
+.featureWork {
+    width: 90%;
+    margin: 0 auto;
+}
+.workBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imgBox {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 10px;
+}
+.imgBox img {
+    width: 100%;
+    height: 100%;
+}
+.featureContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.featureContent h3 {
+    margin: 10px 0;
+}
+.featureDate {
+    display: inline;
+    background-color: var(--primarycolor);
+    color: var(--sixthColor);
+    width: fit-content;
+    padding: 2px 8px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 0.9em;
+}
+.workCat {
+    color: var(--fifthColor);
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 0;
+    background: var(--sixthColor);
+    height: 100%;
+}
+.socialIcon {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.socialIcon a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+.copyright {
+    font-size: 0.8em;
+}
+
+@media (min-width:640px) {
+    .mainHeader {
+        padding: 20px;
+    }
+    .logo a{
+        font-size: 1.5em;
+    }
+    .menuToggle, .menuToggle.active, .navigation.active {
+        display:none;
+        width: 0;
+        height: 0;
+        z-index: 1;
+    }
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+    .navigation li {
+        margin-right: 20px;
+        transition: 0.2s ease-in-out;
+    }
+    .navigation li:hover {
+        transform: scale(1.1);
+    }
+    .banner {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 80%;
+        margin-bottom: 0;
+        padding: 40px 0 80px 0;
+    }
+    .bannerContent {
+        width: 60%;
+        text-align: left;
+    }
+    .title {
+        justify-content: space-between;
+        width: 96%;
+    }
+    .view {
+        display: inline-block;
+    }
+    .postBox {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .boxContent {
+        margin: 0 10px;
+    }
+    .workBox {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .imgBox {
+        margin-right: 20px;
+        max-width: 250px;
+    }
+}
+@media (min-width:980px) {
+    .banner {
+        width: 70%;
+    }
+    .post {
+        width: 70%;
+    }
+    .featureWork {
+        width: 70%;
+    }
+}

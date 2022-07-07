@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans';
+    box-sizing: border-box;    
+    --primarycolor: #21243D;
+    --secondaryColor: #FF6464;
+    --thirdColor:#EDF7FA;
+    --fourthColor:#00A8CC;
+    --fifthColor:#8695A4;
+    --sixthColor:#E0E0E0;
+    color: var(--primarycolor);
+    /* overflow-x: hidden; */
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+.mainHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 20px 100px;
+}
+.logo a{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.logo span {
+    color: var(--secondaryColor);
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation li {
+    margin-left: 40px;
+    transition: 0.2s ease-in-out;
+}
+.navigation li:hover{
+    transform: scale(1.2);
+    font-weight: 300;
+}
+.navigation li:first-child{
+    transition: none;
+}
+.navigation li a.current{
+    display: block;
+    font-weight: bold;
+    transform: scale(1.2);
+    color: var(--secondaryColor);
+}
+.navigation li a.current:hover{
+    transform: none;
+    transition: none;
+}
+.post {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+.heading {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: left;
+}
+.workBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.imgBox {
+    width: 250px;
+    margin-right: 20px;
+    height: 100%;
+}
+.featureContent h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.boxDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.boxDate p:nth-child(2) {
+    padding-left: 10px;
+}
+.featureDate {
+    display: inline;
+    background-color: var(--primarycolor);
+    color: var(--sixthColor);
+    width: fit-content;
+    padding: 2px 8px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 0.9em;
+}
+.workCat {
+    color: var(--fifthColor);
+}
+.featureText {
+    font-size: 0.8em;
+}
+hr {
+    width: 100%;
+    margin: 30px 0;
+    border-width: 0;
+    border-bottom: 0.1px solid var(--sixthColor);
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 0;
+    background: var(--sixthColor);
+    height: 100%;
+}
+.socialIcon {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.socialIcon a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+.copyright {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+@media (max-width:694px) {
+    .mainHeader {
+        padding: 20px 40px;
+    }
+    .navigation {
+        display: none;
+    }
+    .menuToggle {
+        background: url(../menu.png);
+        width: 40px;
+        height: 40px;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: 0.2s ease-in-out;
+        z-index: 100;
+    }
+    .menuToggle.active {
+        background: url(../close.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: 0.2s ease-in-out;
+        position: fixed;
+        top: 20px;
+        right: 40px;
+    }
+    .navigation.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        background: #FFF;
+        z-index: 10;
+    }
+    .navigation.active li {
+        margin-left: 0;
+        margin-top: 10px;
+    }   
+    .post {
+        padding-top: 10px;
+    }
+    .workBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgBox {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 10px 0;
+    }
+    .imgBox img {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width:480px) {
+    .mainHeader {
+        padding: 20px;
+    }
+    .post {
+        width: 90%;
+    }   
+}

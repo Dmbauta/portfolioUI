@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="blog.css">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+</head>
+<body>
+    <main>
+        <header class="mainHeader">
+            <!-- Logo -->
+            <h2 class="logo"><a href="../index.html">Dm<span>.</span></a></h2>
+            <!-- Navigation -->
+            <nav class="menuToggle" onclick="toggleMenu();"></nav>
+            <nav class="navigation" onclick="toggleMenu();">
+                <li><a href="" class="current">Blog</a></li>
+                <li><a href="../work/work.html">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </nav>
+        </header>
+        <!-- Posts -->
+        <section class="container" id="blog">
+            <div class="post">
+            <div class="heading title">
+                <h2>Blog</h2>
+            </div>
+            <div class="postBox">
+                <div class="boxContent"><a href="#">
+                    <h3>Making a design system from scratch</h3></a>
+                    <div class="boxDate">
+                        <p>12 Feb 2022</p>
+                        
+                        <p>Design Pattern</p>
+                    </div>
+                    <p class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+                <hr>
+                <div class="boxContent"><a href="#">
+                    <h3>Creating pixel perfect icons in Figma</h3></a>
+                    <div class="boxDate">
+                        <p>12 Jun 2022</p>
+                        
+                        <p>Figma, Icon Design</p>
+                    </div>
+                    <p class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+                <hr>
+                <div class="boxContent"><a href="#">
+                    <h3>Creating pixel perfect icons in Figma</h3></a>
+                    <div class="boxDate">
+                        <p>12 Jun 2022</p>
+                        
+                        <p>Figma, Icon Design</p>
+                    </div>
+                    <p class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+                <hr>
+                <div class="boxContent"><a href="#">
+                    <h3>Creating pixel perfect icons in Figma</h3></a>
+                    <div class="boxDate">
+                        <p>12 Jun 2022</p>
+                        
+                        <p>Figma, Icon Design</p>
+                    </div>
+                    <p class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+                <hr>
+            </div>
+            </div>
+        </section>
+        <footer id="contact">
+            <div class="socialIcon">
+                <a href="#"><img src="../fb.png" alt=""></a>
+                <a href="#"><img src="../twitter.png" alt=""></a>
+                <a href="#"><img src="../insta.png" alt=""></a>
+                <a href="#"><img src="../linkedin.png" alt=""></a>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy;2022 All rights reserved</p>
+            </div>
+        </footer>
+    </main>
+    <script>
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        };
+    </script>
+</body>
+</html>
